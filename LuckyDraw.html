@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky draw</title>
+
+</head>
+
+<script>
+    var myImg = ["./image/image1.jpg",
+        "./image/image2.jpg",
+        "./image/image3.jpg",
+        "./image/image4.jpg",
+        "./image/image5.jpg",
+        "./image/image6.jpg",
+        "./image/image7.jpg",
+        "./image/image8.jpg",
+        "./image/image9.jpg",
+        "./image/image10.jpg"
+    ];
+
+    function randomImg() {
+        var getImg = Math.floor(Math.random() * myImg.length);
+        alert(myImg.length);
+        document.getElementById("Image").src = myImg[getImg];
+    }
+</script>
+
+<body>
+    <h1> Random Images </h1>
+
+    <img id="Image" src="./image/photo3.jpg" width="300" alt="image1">
+
+    <button type="button" onclick="randomImg()"> Try It </button>
+</body>
+
+</html>
